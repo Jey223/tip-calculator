@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./dist/output.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+  </style>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body class="bg-light-grayish-cyan p-0 m-0 w-full h-full flex items-center text-inputs justify-center font-myFont font-bold">
+  <main class="w-full md:w-[70%] flex flex-col my-[50px]">
+    <h1 class="text-center mb-[20px] tracking-[5px] uppercase text-very-dark-cyan">Spli <br> tter</h1>
+    <section class="bg-white w-full p-[30px] md:p-[40px] lg:p-[30px] rounded-[25px] lg:flex lg:justify-between">
+
+      <div class="w-full py-[10px] mb-[20px] lg:w-[48%] lg:p-[20px] lg:pl-[10px]">
+        <div class="w-full mb-[25px]">
+          <p class="text-[20px] text-grayish-cyan mb-[10px]">
+            Bill
+          </p>
+          <div class="md:text-[30px] lg:text-inputs w-full px-[10px] md:px-[20px] h-[50px] md:h-[70px] lg:h-[50px] items-center rounded-[5px] flex justify-between bg-very-light-grayish-cyan">
+            <p class="text-light-grayish-cyan">$</p>
+            <p class="text-light-grayish-cyan">0</p>
+          </div>
+        </div>
+        <div class="w-full mb-[25px]">
+          <p class="text-[20px] text-grayish-cyan mb-[10px]">Select Tip %</p>
+          <div class="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 lg:gap-4">
+            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">5%</button>
+            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">10%</button>
+            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">15%</button>
+            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">25%</button>
+            <button class=" bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">50%</button>
+            <button class="bg-very-light-grayish-cyan text-grayish-cyan py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">Custom</button>
+          </div>
+        </div>
+        <div class="w-full">
+          <p class="text-[20px] text-grayish-cyan mb-[10px]">Number of People</p>
+          <div class="md:text-[30px] lg:text-inputs w-full px-[10px] md:px-[20px] h-[50px] md:h-[70px] lg:h-[50px] rounded-[5px] flex justify-between items-center bg-very-light-grayish-cyan">
+            <i class="fa-solid fa-user text-[18px] text-light-grayish-cyan"></i>
+            <p class="text-light-grayish-cyan">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-[48%] p-[20px] md:p-[30px] bg-very-dark-cyan rounded-[20px] ">
+        <div class="flex justify-between mb-[35px] lg:mb-[70px] mt-[20px] lg:mt-[40px]">
+          <div>
+            <h2 class="text-[18px] text-white">Tip Amount</h2>
+            <p class="text-[16px] text-grayish-cyan">/ person</p>
+          </div>
+          <div class="flex text-strong-cyan text-[32px]">
+            <p>$</p>
+            <p>0.00</p>
+          </div>
+        </div>
+
+        <div class="flex justify-between lg:mb-[100px] mb-[50px]">
+          <div>
+            <h2 class="text-[18px] text-white">Total</h2>
+            <p class="text-[16px] text-grayish-cyan">/ person</p>
+          </div>
+          <div class="flex text-strong-cyan text-[32px]">
+            <p>$</p>
+            <p>0.00</p>
+          </div>
+        </div>
+
+        <button class="text-very-dark-cyan w-full h-[50px] md:h-[60px] lg:h-[50px] md:text-[30px] lg:text-inputs rounded-[5px] bg-strong-cyan">Reset</button>
+          
+      </div>
+  
+    </section>
+  </main>
+
+ 
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
