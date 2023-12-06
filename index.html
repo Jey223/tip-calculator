@@ -10,6 +10,8 @@
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
+  <script src="script.js" defer></script>
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <style>
@@ -22,37 +24,39 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
 </head>
-<body class="bg-light-grayish-cyan p-0 m-0 w-full h-full flex items-center text-inputs justify-center font-myFont font-bold">
-  <main class="w-full md:w-[70%] flex flex-col my-[50px]">
+<body class="bg-light-grayish-cyan p-0 m-0 w-full h-full flex items-center text-inputs justify-center font-myFont font-bold box-content">
+  <main class="w-full md:w-[70%] flex flex-col my-[50px] lg:my-[35px]">
     <h1 class="text-center mb-[20px] tracking-[5px] uppercase text-very-dark-cyan">Spli <br> tter</h1>
     <section class="bg-white w-full p-[30px] md:p-[40px] lg:p-[30px] rounded-[25px] lg:flex lg:justify-between">
 
       <div class="w-full py-[10px] mb-[20px] lg:w-[48%] lg:p-[20px] lg:pl-[10px]">
-        <div class="w-full mb-[25px]">
-          <p class="text-[20px] text-grayish-cyan mb-[10px]">
-            Bill
-          </p>
-          <div class="md:text-[30px] lg:text-inputs w-full px-[10px] md:px-[20px] h-[50px] md:h-[70px] lg:h-[50px] items-center rounded-[5px] flex justify-between bg-very-light-grayish-cyan">
-            <p class="text-light-grayish-cyan">$</p>
-            <p class="text-light-grayish-cyan">0</p>
+        <form action="" class="w-full mb-[25px]">
+          <div class="flex justify-between error-message" id="bill-text">
+            <p class="para text-[15px] md:text-[20px] text-grayish-cyan mb-[10px]">Bill</p>
           </div>
-        </div>
+          <label for="bill" class="relative h-[50px] md:h-[70px] lg:h-[50px]">
+            <span class="text-light-grayish-cyan absolute text-inputs top-[15%] md:top-[20%] lg:top-[15%] lg:text-inputs md:text-[30px] left-[10px] md:left-[20px] align-middle">$</span>
+            <input type="text" id="bill" placeholder="0" class="text-very-dark-cyan cursor-pointer placeholder:text-light-grayish-cyan placeholder:text-right text-right md:text-[30px] lg:text-inputs w-full px-[10px] md:px-[20px] h-[50px] md:h-[70px] lg:h-[50px] items-center rounded-[5px] flex justify-between bg-very-light-grayish-cyan border-dashed border-2 border-[red] focus:border-4">
+          </label>
+        </form>
         <div class="w-full mb-[25px]">
-          <p class="text-[20px] text-grayish-cyan mb-[10px]">Select Tip %</p>
+          <p class="text-[15px] md:text-[20px] text-grayish-cyan mb-[10px]">Select Tip %</p>
           <div class="grid grid-cols-2 gap-4 md:gap-5 lg:grid-cols-3 lg:gap-4">
-            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">5%</button>
-            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">10%</button>
-            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">15%</button>
-            <button class="bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">25%</button>
-            <button class=" bg-very-dark-cyan text-white py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">50%</button>
-            <button class="bg-very-light-grayish-cyan text-grayish-cyan py-[5px] lg:py-[5px] md:py-[10px] rounded-[6px]">Custom</button>
+            <button value="5" class="btn bg-very-dark-cyan text-white rounded-[6px] h-[50px] md:h-[60px] lg:h-[50px] hover:bg-light-cyan hover:text-very-dark-cyan">5%</button>
+            <button value="10" class="btn bg-very-dark-cyan text-white h-[50px] md:h-[60px] lg:h-[50px] rounded-[6px] hover:bg-light-cyan hover:text-very-dark-cyan">10%</button>
+            <button value="15" class="btn bg-very-dark-cyan text-white h-[50px] md:h-[60px] lg:h-[50px] rounded-[6px] hover:bg-light-cyan hover:text-very-dark-cyan">15%</button>
+            <button value="25" class="btn bg-very-dark-cyan text-white h-[50px] md:h-[60px] lg:h-[50px] rounded-[6px] hover:bg-light-cyan hover:text-very-dark-cyan">25%</button>
+            <button value="50" class="btn bg-very-dark-cyan text-white h-[50px] md:h-[60px] lg:h-[50px] rounded-[6px] hover:bg-light-cyan hover:text-very-dark-cyan">50%</button>
+            <input type="text" name="" id="custom-value" placeholder="Custom" class="text-very-dark-cyan h-[50px] md:h-[60px] lg:h-[50px] px-[15px] placeholder:text-center text-right bg-very-light-grayish-cyan placeholder:text-grayish-cyan rounded-[6px] cursor-pointer">
           </div>
         </div>
         <div class="w-full">
-          <p class="text-[20px] text-grayish-cyan mb-[10px]">Number of People</p>
-          <div class="md:text-[30px] lg:text-inputs w-full px-[10px] md:px-[20px] h-[50px] md:h-[70px] lg:h-[50px] rounded-[5px] flex justify-between items-center bg-very-light-grayish-cyan">
-            <i class="fa-solid fa-user text-[18px] text-light-grayish-cyan"></i>
-            <p class="text-light-grayish-cyan">0</p>
+          <div class="error-message flex justify-between" id="no-people">
+            <p class="text-[15px] md:text-[20px] text-grayish-cyan mb-[10px]">Number of People</p>
+          </div>
+          <div class=" w-full relative h-[50px] md:h-[70px]">
+            <i class="fa-solid fa-user text-[18px] text-light-grayish-cyan absolute top-[35%] lg:top-[25%] md:text-[20px] lg:text-[18px] left-[10px] md:left-[20px]"></i>
+            <input type="text" id="people" placeholder="0" class="text-very-dark-cyan text-right placeholder:text-right placeholder:text-light-grayish-cyan w-full md:text-[30px] lg:text-inputs px-[10px] md:px-[20px] h-[50px] md:h-[70px] lg:h-[50px] rounded-[5px] bg-very-light-grayish-cyan">
           </div>
         </div>
       </div>
@@ -63,9 +67,8 @@
             <h2 class="text-[18px] text-white">Tip Amount</h2>
             <p class="text-[16px] text-grayish-cyan">/ person</p>
           </div>
-          <div class="flex text-strong-cyan text-[32px]">
-            <p>$</p>
-            <p>0.00</p>
+          <div class="text-strong-cyan text-[32px]">
+            <p id="tip-person"><span>$</span>0.00</p>
           </div>
         </div>
 
@@ -75,12 +78,11 @@
             <p class="text-[16px] text-grayish-cyan">/ person</p>
           </div>
           <div class="flex text-strong-cyan text-[32px]">
-            <p>$</p>
-            <p>0.00</p>
+            <p id="total-person"><span>$</span>0.00</p>
           </div>
         </div>
 
-        <button class="text-very-dark-cyan w-full h-[50px] md:h-[60px] lg:h-[50px] md:text-[30px] lg:text-inputs rounded-[5px] bg-strong-cyan">Reset</button>
+        <button id="reset" class="hover:bg-light-cyan text-very-dark-cyan w-full h-[50px] md:h-[60px] lg:h-[50px] md:text-[30px] lg:text-inputs rounded-[5px] bg-strong-cyan">Reset</button>
           
       </div>
   

@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'light-cyan' : 'hsl(172, 67%, 65%)',
         'strong-cyan' : 'hsl(172, 67%, 45%)',
         'very-dark-cyan' : 'hsl(183, 100%, 15%)',
         'dark-grayish-cyan' : 'hsl(186, 14%, 43%)',
@@ -19,6 +20,13 @@ module.exports = {
         'myFont': ['"Space Mono"', 'sans-serif']
       }
     },
+  },
+  variants: {
+    extend: {
+      borderWidth: ['responsive', 'hover', 'focus', 'active'],
+      borderColor: ['responsive', 'hover', 'focus', 'active'],
+      borderStyle: ['responsive', 'hover', 'focus', 'active'],
+    }
   },
   plugins: [],
 }
